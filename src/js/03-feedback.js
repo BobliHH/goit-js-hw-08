@@ -4,6 +4,8 @@ const key = 'feedback-form-state';
 
 const feedbackForm = document.querySelector('feedback-form');
 
+feedbackForm.addEventListener('input', throttle(onInput, 500));
+
 let inputForm = JSON.parse(localStorage.getItem(key));
 const { email, message } = feedbackForm.elements;
 
