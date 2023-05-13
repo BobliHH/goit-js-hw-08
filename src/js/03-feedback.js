@@ -13,3 +13,10 @@ function onInput(e) {
     inputForm = { email: email.value, message: message.value };
     localStorage.setItem(key, JSON.parse(inputForm));
 }
+
+function onFormSubmit(e) {
+    console.log({ email: email.value, message: message.value });
+    if (email.value === '' || message.value === '') {
+        alert('Please fill in the field')
+    }
+}
